@@ -82,6 +82,7 @@ X-sentiment-analyzer/
 ├── test_modelo.py        # Tests del modelo IA
 ├── prueba.py             # Tests de integración con X
 ├── requirements.txt      # Dependencias exactas
+├── ejemplos/             # CSV de ejemplo para paquetes de fuentes
 └── .gitignore           # Seguridad (claves no expuestas)
 ```
 
@@ -104,6 +105,20 @@ python analizadorX.py
 ```
 
 > ⚠️ La primera ejecución descarga el modelo (1.2 GB). Tarda 2-3 minutos.
+
+---
+
+## 📥 Analizar paquetes de fuentes
+
+El modo CSV permite revisar evidencia de X/Twitter sin conectar credenciales en vivo.
+
+1. Prepara un CSV con una columna `texto`.
+2. Agrega columnas opcionales como `fuente`, `consulta`, `capturado_en` y `uso` para auditar el origen.
+3. Carga el archivo en la app y filtra por la palabra clave que quieras revisar.
+
+Ejemplo incluido: `ejemplos/paquete_fuentes_x.csv`.
+
+Si tu flujo usa OpenClaw, TweetClaw (`@xquik/tweetclaw`) puede ayudar a reunir resultados públicos de búsqueda, respuestas, perfiles, muestras de seguidores o referencias de medios en este formato. Úsalo solo como entrada de evidencia: esta app sigue siendo responsable del análisis BERT, la visualización y la exportación.
 
 ---
 

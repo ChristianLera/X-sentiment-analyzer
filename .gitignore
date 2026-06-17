@@ -8,6 +8,7 @@ __pycache__/
 
 # Datos (pesados)
 *.csv
+!ejemplos/*.csv
 *.png
 *.jpg
 

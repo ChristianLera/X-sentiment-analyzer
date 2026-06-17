@@ -1,8 +1,0 @@
-torch
-transformers
-sentencepiece
-tweepy
-textblob
-pandas
-matplotlib
-python-dotenv
